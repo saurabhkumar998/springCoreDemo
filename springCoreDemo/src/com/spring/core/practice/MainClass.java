@@ -15,7 +15,7 @@ public class MainClass {
 		//Triangle triangle = (Triangle) factory.getBean("triangle");
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		Triangle triangle = (Triangle) context.getBean("triangle");
+		Triangle triangle = (Triangle) context.getBean("triangle-alias");
 		
 		triangle.draw();
 		
