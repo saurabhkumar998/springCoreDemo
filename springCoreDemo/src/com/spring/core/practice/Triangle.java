@@ -2,12 +2,17 @@ package com.spring.core.practice;
 
 import java.util.List;
 
-public class Triangle {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Triangle implements ApplicationContextAware, BeanNameAware {
 	
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-
+	private ApplicationContext context;
 
 	public Point getPointA() {
 		return pointA;
@@ -41,6 +46,21 @@ public class Triangle {
 		System.out.println(this.pointA.getX() + " , " + this.getPointA().getY());
 		System.out.println(this.pointB.getX() + " , " + this.getPointB().getY());
 		System.out.println(this.pointC.getX() + " , " + this.getPointC().getY());
+	}
+
+
+	@Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		// TODO Auto-generated method stub
+		this.context = context;
+		
+	}
+
+
+	@Override
+	public void setBeanName(String beanName) {
+		System.out.println("Bean Name is : "+ beanName);
+		
 	}
 
 }
