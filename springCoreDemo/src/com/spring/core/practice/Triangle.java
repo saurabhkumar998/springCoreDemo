@@ -62,5 +62,13 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
 		System.out.println("Bean Name is : "+ beanName);
 		
 	}
+	
+	public void myInit() {
+		System.out.println("myInit method is called for triangle.");
+	}
+	
+	public void cleanUp() {
+		System.out.println("cleanUp method is called.");
+	}
 
 }
