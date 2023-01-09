@@ -24,12 +24,17 @@
 		<property name ="y" value="0"/>
 	</bean>
 	
-	<!-- 
+<!-- 
 	<alias name="triangle" alias="triangle-alias"/>
-	 -->
+-->
 	
+<!-- 
+	uncomment this block to run DisplayBeanPostProcessor class
+	 
 	<bean class = "com.spring.core.practice.DisplayNameBeanPostProcessor"/>
+-->
 
+	<bean class = "com.spring.core.practice.MyBeanFactoryPostProcessor"/>
 	
 
 </beans>
