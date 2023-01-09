@@ -7,7 +7,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements ApplicationContextAware, BeanNameAware {
+public class Triangle implements Shape {
 	
 	private Point pointA;
 	private Point pointB;
@@ -42,34 +42,11 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
 
 
 
-	void draw(){
+	public void draw(){
+		System.out.println("Drawing Triangle : ");
 		System.out.println(this.pointA.getX() + " , " + this.getPointA().getY());
 		System.out.println(this.pointB.getX() + " , " + this.getPointB().getY());
 		System.out.println(this.pointC.getX() + " , " + this.getPointC().getY());
 	}
-
-
-	@Override
-	public void setApplicationContext(ApplicationContext context) throws BeansException {
-		// TODO Auto-generated method stub
-		this.context = context;
-		
-	}
-
-
-	@Override
-	public void setBeanName(String beanName) {
-//		System.out.println("Bean Name is : "+ beanName);
-		
-	}
-/*
-	public void myInit() {
-		System.out.println("myInit method is called for triangle.");
-	}
-	
-	public void cleanUp() {
-		System.out.println("cleanUp method is called.");
-	}
-	*/
 
 }

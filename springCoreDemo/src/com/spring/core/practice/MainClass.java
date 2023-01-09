@@ -16,9 +16,12 @@ public class MainClass {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		//Triangle triangle = (Triangle) context.getBean("triangle-alias");
-		Triangle triangle = (Triangle) context.getBean("triangle");
+		//Triangle triangle = (Triangle) context.getBean("triangle");
+		Shape shape = (Shape) context.getBean("triangle");
+		shape.draw();
 		
-		triangle.draw();
+		Shape shape2 = (Shape) context.getBean("circle");
+		shape2.draw();
 		
 	}
 

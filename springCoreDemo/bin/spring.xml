@@ -8,6 +8,11 @@
 		<property name="pointB" ref="pointB"/>
 		<property name="pointC" ref="pointC"/>
 	</bean>
+
+	<bean id ="circle" class="com.spring.core.practice.Circle">
+		<property name="center" ref="pointA"/>
+	</bean>
+
 	
 	<bean id ="pointA" class = "com.spring.core.practice.Point">
 		<property name ="x" value="${PointA.PointX}"/>
