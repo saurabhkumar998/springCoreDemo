@@ -28,7 +28,7 @@
 	<alias name="triangle" alias="triangle-alias"/>
 	 -->
 	
-	
+	<bean class = "com.spring.core.practice.DisplayNameBeanPostProcessor"/>
 
 	
 

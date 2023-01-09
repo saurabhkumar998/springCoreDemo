@@ -59,10 +59,10 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
 
 	@Override
 	public void setBeanName(String beanName) {
-		System.out.println("Bean Name is : "+ beanName);
+//		System.out.println("Bean Name is : "+ beanName);
 		
 	}
-	
+/*
 	public void myInit() {
 		System.out.println("myInit method is called for triangle.");
 	}
@@ -70,5 +70,6 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
 	public void cleanUp() {
 		System.out.println("cleanUp method is called.");
 	}
+	*/
 
 }
