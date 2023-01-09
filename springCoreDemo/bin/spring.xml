@@ -10,18 +10,22 @@
 	</bean>
 	
 	<bean id ="pointA" class = "com.spring.core.practice.Point">
-		<property name ="x" value="0"/>
-		<property name ="y" value="0"/>
+		<property name ="x" value="${PointA.PointX}"/>
+		<property name ="y" value="${PointA.PointY}"/>
 	</bean>
 	
 	<bean id="pointB" class = "com.spring.core.practice.Point">
-		<property name ="x" value="-20"/>
-		<property name ="y" value="0"/>
+		<property name ="x" value="${PointB.PointX}"/>
+		<property name ="y" value="${PointB.PointY}"/>
 	</bean>
 	
 	<bean id ="pointC" class = "com.spring.core.practice.Point">
-		<property name ="x" value="20"/>
-		<property name ="y" value="0"/>
+		<property name ="x" value="${PointC.PointX}"/>
+		<property name ="y" value="${PointC.PointY}"/>
+	</bean>
+	
+	<bean class = "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties" />
 	</bean>
 	
 <!-- 
@@ -34,7 +38,10 @@
 	<bean class = "com.spring.core.practice.DisplayNameBeanPostProcessor"/>
 -->
 
+<!-- 
 	<bean class = "com.spring.core.practice.MyBeanFactoryPostProcessor"/>
+-->
+	
 	
 
 </beans>
