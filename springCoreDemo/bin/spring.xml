@@ -2,9 +2,14 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config/>
+    
 	<bean id ="triangle" class="com.spring.core.practice.Triangle">
 		<property name="pointA" ref="pointA"/>
 		<property name="pointB" ref="pointB"/>
@@ -14,13 +19,9 @@
 	<bean id ="circle" class="com.spring.core.practice.Circle">
 	</bean>
 
-		
-	<bean id ="center" class = "com.spring.core.practice.Point">
-		<property name ="x" value="${PointA.PointX}"/>
-		<property name ="y" value="${PointA.PointY}"/>
-	</bean>
 	
 	<bean id ="pointA" class = "com.spring.core.practice.Point">
+		<qualifier value ="circleRelated"/>
 		<property name ="x" value="${PointA.PointX}"/>
 		<property name ="y" value="${PointA.PointY}"/>
 	</bean>
@@ -38,8 +39,6 @@
 	<bean class = "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations" value="pointsconfig.properties" />
 	</bean>
-	
-	<bean class = "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 	
 
 </beans>
