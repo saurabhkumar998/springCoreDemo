@@ -1,6 +1,6 @@
 package com.spring.core.practice;
 
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Circle implements Shape{
 	
@@ -13,7 +13,7 @@ public class Circle implements Shape{
 	}
 
 
-	@Required
+	@Autowired
 	public void setCenter(Point center) {
 		this.center = center;
 	}
